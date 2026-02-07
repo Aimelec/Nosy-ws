@@ -7,6 +7,6 @@ class CreateGameGenres < ActiveRecord::Migration[8.1]
       t.timestamps
     end
 
-    add_index :game_genres, [:game_id, :genre_id], unique: true
+    add_index :game_genres, [ :game_id, :genre_id ], unique: true
   end
 end

@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 07 Feb 2026 20:02:50 GMT
+      - Sat, 07 Feb 2026 23:50:33 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -33,13 +33,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Ctxlog-Logid:
-      - 1-69879a69-05e1b42503dbb1bd092fc50f
+      - 1-6987cfc9-7a89d6de2a8a4fb85de19b9d
     body:
       encoding: UTF-8
-      string: '{"access_token":"<IGDB_ACCESS_TOKEN>","expires_in":5283390,"token_type":"bearer"}
+      string: '{"access_token":"<IGDB_ACCESS_TOKEN>","expires_in":5556876,"token_type":"bearer"}
 
         '
-  recorded_at: Sat, 07 Feb 2026 20:02:50 GMT
+  recorded_at: Sat, 07 Feb 2026 23:50:33 GMT
 - request:
     method: post
     uri: https://api.igdb.com/v4/games
@@ -59,7 +59,7 @@ http_interactions:
       Client-Id:
       - "<IGDB_CLIENT_ID>"
       Authorization:
-      - Bearer q3z5rkprnetvp18nru8ef3pygaa68s
+      - Bearer <IGDB_ACCESS_TOKEN>
   response:
     status:
       code: 200
@@ -72,29 +72,29 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 07 Feb 2026 20:02:50 GMT
+      - Sat, 07 Feb 2026 23:50:34 GMT
       X-Amzn-Remapped-Date:
-      - Sat, 07 Feb 2026 20:02:50 GMT
+      - Sat, 07 Feb 2026 23:50:34 GMT
       X-Amzn-Requestid:
-      - ad9520a2-9771-4768-9ddb-08a40f6636ac
+      - 4f209cdf-3d38-4fbc-b061-084c23a9c0ea
       X-Amzn-Remapped-Content-Length:
       - '820'
       X-Pool:
       - default
       X-Amz-Apigw-Id:
-      - YbUQuHQwvHcEPqg=
+      - Yb1ntEvZPHcEWuw=
       X-Count:
       - '1'
       X-Amzn-Trace-Id:
-      - Root=1-69879a6a-2218a2b65aba12660feb14b4
+      - Root=1-6987cfca-280238d3004162296a6535f4
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 9b5b61e95f7bf297d2dc80fb3c7726de.cloudfront.net (CloudFront)
+      - 1.1 568178ded427d18c92edfc86030e6810.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - EZE50-P3
       X-Amz-Cf-Id:
-      - RgnKomjAr1ke_CSpZRPWQPnGgUFMisUZ83uQHCUzPwTEcAy5nSjx6w==
+      - 4ifqlEsPzpO3DsmYSiF8xIkiQqNGMIiy3MVAaT30NHlEDXXZtUJKsQ==
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -175,5 +175,5 @@ http_interactions:
             "summary": "Zelda II: The Adventure of Link is the second major installment in The Legend of Zelda series and the direct sequel to the first game. Like its predecessor, it features dungeons that must be located in the overworld and searched for an item that will prove useful. However, the game presents many very important gameplay changes compared to the previous one, affecting especially the movements and the combat. Moving around the world map involves encounters with enemies that take place on a side-scrolling playfield rather than the top-down perspective for which the series became known."
           }
         ]
-  recorded_at: Sat, 07 Feb 2026 20:02:50 GMT
+  recorded_at: Sat, 07 Feb 2026 23:50:34 GMT
 recorded_with: VCR 6.4.0

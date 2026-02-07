@@ -19,7 +19,7 @@ class CreateGames < ActiveRecord::Migration[8.1]
 
     add_index :games, :slug, unique: true
     add_index :games, :igdb_id
-    add_index :games, [:source, :igdb_id], unique: true
+    add_index :games, [ :source, :igdb_id ], unique: true
     add_index :games, :platforms, using: :gin
   end
 end

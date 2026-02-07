@@ -19,6 +19,12 @@ VCR.configure do |config|
     end
   end
 
+  config.before_record do |interaction|
+    interaction.request.headers["Authorization"]&.map! do |value|
+      value.gsub(/Bearer .+/, "Bearer <IGDB_ACCESS_TOKEN>")
+    end
+  end
+
   config.default_cassette_options = {
     record: :new_episodes,
     match_requests_on: %i[method uri body]

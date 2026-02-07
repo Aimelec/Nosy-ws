@@ -16,8 +16,8 @@ RSpec.describe GameImporter do
         { name: "Platform", slug: "platform" },
         { name: "Adventure", slug: "adventure" }
       ],
-      platforms: ["NES"],
-      companies: ["Nintendo"]
+      platforms: [ "NES" ],
+      companies: [ "Nintendo" ]
     }
   end
 
@@ -28,7 +28,7 @@ RSpec.describe GameImporter do
 
     it "creates associated genres" do
       importer.import(igdb_data)
-      expect(Genre.pluck(:slug)).to match_array(["platform", "adventure"])
+      expect(Genre.pluck(:slug)).to match_array([ "platform", "adventure" ])
     end
 
     it "links genres to the game" do
@@ -43,7 +43,7 @@ RSpec.describe GameImporter do
       expect(game.slug).to eq("zelda-ii-the-adventure-of-link")
       expect(game.source).to eq("igdb")
       expect(game.igdb_id).to eq(1025)
-      expect(game.developers).to eq(["Nintendo"])
+      expect(game.developers).to eq([ "Nintendo" ])
     end
 
     it "updates an existing game on re-import" do
@@ -80,14 +80,14 @@ RSpec.describe GameImporter do
         cover_url: "https://images.igdb.com/bb.jpg",
         rating: 92.0,
         first_release_date: Time.utc(2015, 3, 24),
-        genres: [{ name: "Adventure", slug: "adventure" }],
-        platforms: ["PlayStation 4"],
-        companies: ["FromSoftware"]
+        genres: [ { name: "Adventure", slug: "adventure" } ],
+        platforms: [ "PlayStation 4" ],
+        companies: [ "FromSoftware" ]
       }
     end
 
     it "imports multiple games" do
-      results = importer.import_batch([igdb_data, second_game])
+      results = importer.import_batch([ igdb_data, second_game ])
 
       expect(results[:success].count).to eq(2)
       expect(results[:failed]).to be_empty
@@ -96,7 +96,7 @@ RSpec.describe GameImporter do
     it "tracks failures without stopping the batch" do
       invalid_data = igdb_data.merge(name: nil, slug: nil)
 
-      results = importer.import_batch([invalid_data, second_game])
+      results = importer.import_batch([ invalid_data, second_game ])
 
       expect(results[:success].count).to eq(1)
       expect(results[:failed].count).to eq(1)

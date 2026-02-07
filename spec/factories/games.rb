@@ -8,7 +8,7 @@ FactoryBot.define do
     cover_image_url { "https://images.igdb.com/cover.jpg" }
     user_rating { 92.5 }
     release_date { Date.new(2015, 5, 19) }
-    platforms { ["PC (Microsoft Windows)", "PlayStation 4"] }
-    developers { ["CD Projekt RED"] }
+    platforms { [ "PC (Microsoft Windows)", "PlayStation 4" ] }
+    developers { [ "CD Projekt RED" ] }
   end
 end

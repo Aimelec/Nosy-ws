@@ -14,8 +14,8 @@ RSpec.describe Igdb::GameAdapter do
         { name: "Platform", slug: "platform" },
         { name: "Adventure", slug: "adventure" }
       ],
-      platforms: ["NES", "Wii"],
-      companies: ["Nintendo"]
+      platforms: [ "NES", "Wii" ],
+      companies: [ "Nintendo" ]
     }
   end
 
@@ -57,11 +57,11 @@ RSpec.describe Igdb::GameAdapter do
     end
 
     it "maps platforms" do
-      expect(attrs[:platforms]).to eq(["NES", "Wii"])
+      expect(attrs[:platforms]).to eq([ "NES", "Wii" ])
     end
 
     it "maps companies to developers" do
-      expect(attrs[:developers]).to eq(["Nintendo"])
+      expect(attrs[:developers]).to eq([ "Nintendo" ])
     end
 
     context "with nil optional fields" do

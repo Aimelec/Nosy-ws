@@ -94,7 +94,7 @@ RSpec.describe Game do
       create(:game, user_rating: nil)
 
       results = Game.top_rated.to_a
-      expect(results).to eq([high, low])
+      expect(results).to eq([ high, low ])
     end
   end
 end
