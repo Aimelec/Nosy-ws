@@ -50,6 +50,10 @@ group :development, :test do
 
   # Testing
   gem "rspec-rails"
+  gem "factory_bot_rails"
   gem "vcr"
   gem "webmock"
+
+  # Schema annotations on model files
+  gem "annotaterb"
 end
