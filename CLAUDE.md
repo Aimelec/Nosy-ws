@@ -43,4 +43,4 @@ Steps to verify the changes work correctly (console commands, test commands, etc
 
 - Everything runs inside Docker — never install Ruby or gems on the host
 - Run Rails commands via: `docker compose run --rm ws bin/rails <command>`
-- Run tests via: `docker compose run --rm ws bundle exec rspec`
+- Run tests via: `docker compose run --rm -e RAILS_ENV=test ws bundle exec rspec`
