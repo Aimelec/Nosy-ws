@@ -1,0 +1,311 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://id.twitch.tv/oauth2/token?client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - id.twitch.tv
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 07 Feb 2026 20:02:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctxlog-Logid:
+      - 1-69879a67-7a6bb1c7410ab1e2381e4f41
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<IGDB_ACCESS_TOKEN>","expires_in":4793390,"token_type":"bearer"}
+
+        '
+  recorded_at: Sat, 07 Feb 2026 20:02:48 GMT
+- request:
+    method: post
+    uri: https://api.igdb.com/v4/games
+    body:
+      encoding: UTF-8
+      string: search "zelda"; fields name,slug,summary,cover.url,cover.image_id,genres.name,genres.slug,platforms.name,rating,first_release_date,involved_companies.company.name;
+        limit 3;
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.igdb.com
+      Client-Id:
+      - "<IGDB_CLIENT_ID>"
+      Authorization:
+      - Bearer 373wtcqhhimjqbewq6m7wcfwe3eeom
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '5939'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 07 Feb 2026 20:02:48 GMT
+      X-Amzn-Remapped-Date:
+      - Sat, 07 Feb 2026 20:02:48 GMT
+      X-Amzn-Requestid:
+      - 344106a7-1901-431a-adcd-eccb6fa006d8
+      X-Amzn-Remapped-Content-Length:
+      - '1722'
+      X-Pool:
+      - default
+      X-Amz-Apigw-Id:
+      - YbUQcHPxPHcEEgw=
+      X-Count:
+      - '369'
+      X-Amzn-Trace-Id:
+      - Root=1-69879a68-701914da34acf60148974cdb
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 1c86359d1a42b7d6894486775c436862.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - EZE50-P3
+      X-Amz-Cf-Id:
+      - u_e2X5kvJupsQe_GeK45eKWnZT9xrknqTwA3QPvZRVz0O5CpVlUA8Q==
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 1022,
+            "cover": {
+              "id": 86202,
+              "image_id": "co1uii",
+              "url": "//images.igdb.com/igdb/image/upload/t_thumb/co1uii.jpg"
+            },
+            "first_release_date": 509328000,
+            "genres": [
+              {
+                "id": 31,
+                "name": "Adventure",
+                "slug": "adventure"
+              }
+            ],
+            "involved_companies": [
+              {
+                "id": 180342,
+                "company": {
+                  "id": 70,
+                  "name": "Nintendo"
+                }
+              },
+              {
+                "id": 197987,
+                "company": {
+                  "id": 32471,
+                  "name": "Nintendo R\u0026D4"
+                }
+              },
+              {
+                "id": 225320,
+                "company": {
+                  "id": 33804,
+                  "name": "Playtronic"
+                }
+              }
+            ],
+            "name": "The Legend of Zelda",
+            "platforms": [
+              {
+                "id": 51,
+                "name": "Family Computer Disk System"
+              },
+              {
+                "id": 37,
+                "name": "Nintendo 3DS"
+              },
+              {
+                "id": 5,
+                "name": "Wii"
+              },
+              {
+                "id": 99,
+                "name": "Family Computer"
+              },
+              {
+                "id": 41,
+                "name": "Wii U"
+              },
+              {
+                "id": 18,
+                "name": "Nintendo Entertainment System"
+              }
+            ],
+            "rating": 80.33515720762011,
+            "slug": "the-legend-of-zelda",
+            "summary": "The Legend of Zelda is the first title in the Zelda series, it has marked the history of video games particularly for it\u0027s game mechanics and universe. The player controls Link and must make his way through the forests, graveyards, plains and deserts of the Otherworld to find the secret entrances to the eight dungeons and try to restore the broken Triforce. Among the game\u0027s mechanics, it was the first time we saw a continuous world that could be freely explored, power-ups that permanently enhanced the main character\u0027s abilities and a battery save feature that allowed players to keep their progress instead of having to start over. The gameplay balanced action sequences with discovery, secrets and exploration."
+          },
+          {
+            "id": 1025,
+            "cover": {
+              "id": 86234,
+              "image_id": "co1uje",
+              "url": "//images.igdb.com/igdb/image/upload/t_thumb/co1uje.jpg"
+            },
+            "first_release_date": 537580800,
+            "genres": [
+              {
+                "id": 8,
+                "name": "Platform",
+                "slug": "platform"
+              },
+              {
+                "id": 12,
+                "name": "Role-playing (RPG)",
+                "slug": "role-playing-rpg"
+              },
+              {
+                "id": 31,
+                "name": "Adventure",
+                "slug": "adventure"
+              }
+            ],
+            "involved_companies": [
+              {
+                "id": 149156,
+                "company": {
+                  "id": 70,
+                  "name": "Nintendo"
+                }
+              },
+              {
+                "id": 198227,
+                "company": {
+                  "id": 32471,
+                  "name": "Nintendo R\u0026D4"
+                }
+              },
+              {
+                "id": 225322,
+                "company": {
+                  "id": 33804,
+                  "name": "Playtronic"
+                }
+              }
+            ],
+            "name": "Zelda II: The Adventure of Link",
+            "platforms": [
+              {
+                "id": 51,
+                "name": "Family Computer Disk System"
+              },
+              {
+                "id": 37,
+                "name": "Nintendo 3DS"
+              },
+              {
+                "id": 5,
+                "name": "Wii"
+              },
+              {
+                "id": 41,
+                "name": "Wii U"
+              },
+              {
+                "id": 18,
+                "name": "Nintendo Entertainment System"
+              }
+            ],
+            "rating": 65.97119224765927,
+            "slug": "zelda-ii-the-adventure-of-link",
+            "summary": "Zelda II: The Adventure of Link is the second major installment in The Legend of Zelda series and the direct sequel to the first game. Like its predecessor, it features dungeons that must be located in the overworld and searched for an item that will prove useful. However, the game presents many very important gameplay changes compared to the previous one, affecting especially the movements and the combat. Moving around the world map involves encounters with enemies that take place on a side-scrolling playfield rather than the top-down perspective for which the series became known."
+          },
+          {
+            "id": 1041,
+            "cover": {
+              "id": 132049,
+              "image_id": "co2tw1",
+              "url": "//images.igdb.com/igdb/image/upload/t_thumb/co2tw1.jpg"
+            },
+            "first_release_date": 983232000,
+            "genres": [
+              {
+                "id": 9,
+                "name": "Puzzle",
+                "slug": "puzzle"
+              },
+              {
+                "id": 12,
+                "name": "Role-playing (RPG)",
+                "slug": "role-playing-rpg"
+              },
+              {
+                "id": 31,
+                "name": "Adventure",
+                "slug": "adventure"
+              }
+            ],
+            "involved_companies": [
+              {
+                "id": 198386,
+                "company": {
+                  "id": 70,
+                  "name": "Nintendo"
+                }
+              },
+              {
+                "id": 200281,
+                "company": {
+                  "id": 660,
+                  "name": "Capcom Production Studio 1"
+                }
+              },
+              {
+                "id": 224817,
+                "company": {
+                  "id": 812,
+                  "name": "Gradiente"
+                }
+              }
+            ],
+            "name": "The Legend of Zelda: Oracle of Ages",
+            "platforms": [
+              {
+                "id": 22,
+                "name": "Game Boy Color"
+              },
+              {
+                "id": 37,
+                "name": "Nintendo 3DS"
+              }
+            ],
+            "rating": 84.26917663679875,
+            "slug": "the-legend-of-zelda-oracle-of-ages",
+            "summary": "The Legend of Zelda: Oracle of Ages is one of two Zelda titles released for the Game Boy Color, the other being Oracle of Seasons. The game retain many gameplay elements from Link\u0027s Awakening such as the graphics, audio and top-view perspective. It also features eight dungeons and a large overworld to explore like in the previous games. Oracle of Ages is said to be more puzzle-oriented than its counterpart being more action-oriented. After completing one of the two games, both can be linked to form a single linear plot with an alternate ending. Oracle of Ages and Oracle of Seasons were often credited as being two of the top games for the Game Boy Color."
+          }
+        ]
+  recorded_at: Sat, 07 Feb 2026 20:02:48 GMT
+recorded_with: VCR 6.4.0
