@@ -50,3 +50,6 @@
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+# Ignore coverage and code quality reports
+/coverage/
+

@@ -56,4 +56,10 @@ group :development, :test do
 
   # Schema annotations on model files
   gem "annotaterb"
+
+  # Code coverage
+  gem "simplecov", require: false
+
+  # Code quality analysis
+  gem "rubycritic", require: false
 end
